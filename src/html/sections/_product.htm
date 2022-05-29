@@ -1,0 +1,185 @@
+<section class="product">
+	<div class="product__container">
+		<div class="product__content">
+			<div class="product__sliders">
+
+			</div>
+			<div class="product__info">
+				<h1 class="product__title title">Название продукта</h1>
+
+				<div class="reviews">
+					<div class="reviews__rating"></div>
+					<a class="reviews__count" href="#">5 отзывов</a>
+				</div>
+
+				<div class="product__price">
+					<span class="product__price-old">299 грн</span>
+					<span class="product__price-new">199 грн</span>
+				</div>
+
+				<div class="product__remainders">
+					Остаток: <span class="product__remain-counter">8шт.</span>
+				</div>
+
+				<div class="product__order">
+					<span>Количество</span>
+
+					<div class="product__order-content">
+						<div class="counter">
+							<button class="counter__btn" type="button">-</button>
+							<input class="counter__input" type="text">
+							<button class="counter__btn" type="button">+</button>
+						</div>
+						<a class="product__add" href="#">Добавить в корзину</a>
+					</div>
+
+					<div class="product__content">
+						<h2>Описание</h2>
+
+						<p>
+							Praesent dolor dignissim neque arcu sem proin volutpat dignissim et. Nunc orci, vulputate ut fermentum,
+							odio tincidunt
+							id vestibulum. Semper id orci, suspendisse habitant nunc a eget rutrum. Tortor habitant nibh turpis sem
+							sed rhoncus,
+							magnis ornare nec. Sit aliquet ultrices dictum pellentesque massa tellus. Sagittis aenean habitant mi, leo
+							tempor tellus
+							in nisl pretium. Mattis eget ut suspendisse habitant mattis.
+						</p>
+						<p>
+							Sagittis cursus pharetra in tristique ultricies. Luctus mattis montes, feugiat at sed. Dignissim faucibus
+							viverra eget
+							maecenas mattis amet leo. Eu ut tellus purus, sollicitudin cursus sollicitudin. Rhoncus tortor sem nec sit
+							feugiat sit
+							quis rhoncus feugiat. Turpis quam tristique ultrices a tincidunt sed. Tortor sed lectus pellentesque in
+							lacus. Tincidunt
+							scelerisque morbi magnis amet imperdiet.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div data-tabs class="product__tabs tabs">
+			<nav data-tabs-titles class="tabs__navigation">
+				<button type="submit" class="tabs__title _tab-active">Отзывы (2)</button>
+				<button type="submit" class="tabs__title">Доставка и оплата</button>
+			</nav>
+			<div data-tabs-body class="tabs__content">
+				<div class="tabs__body">
+					<div class="product__feedback">
+						<ul class="product__reviews">
+							<li class="product__reviews-item">
+								<article class="review">
+									<img class="review__avatar" src="@img/avatar.png" alt="avatar">
+									<div class="review__info">
+										<div class="review__top">
+											<span class="review__name">Name</span>
+											<span class="review__date">11 мая, 2022 года</span>
+										</div>
+										<div class="review__rating"></div>
+										<div class="review__text">
+											<p>
+												Suscipit malesuada nam faucibus phasellus in sodales nisl. Sed fames eget augue fringilla
+												sapien.
+												Blandit etiam et
+												consectetur hendrerit ultricies malesuada vel semper etiam. Massa pellentesque sollicitudin est
+												at
+												neque, habitant ac
+												nunc, amet. Semper mauris lobortis imperdiet aliquet eu pulvinar.
+											</p>
+										</div>
+									</div>
+								</article>
+							</li>
+							<li class="product__reviews-item">
+								<article class="review">
+									<img class="review__avatar" src="@img/avatar.png" alt="avatar">
+									<div class="review__info">
+										<div class="review__top">
+											<span class="review__name">Name</span>
+											<span class="review__date">11 мая, 2022 года</span>
+										</div>
+										<div class="review__rating"></div>
+										<div class="review__text">
+											<p>
+												Suscipit malesuada nam faucibus phasellus in sodales nisl. Sed fames eget augue fringilla
+												sapien.
+												Blandit etiam et
+												consectetur hendrerit ultricies malesuada vel semper etiam. Massa pellentesque sollicitudin est
+												at
+												neque, habitant ac
+												nunc, amet. Semper mauris lobortis imperdiet aliquet eu pulvinar.
+											</p>
+										</div>
+									</div>
+								</article>
+							</li>
+						</ul>
+
+						<div class="rating">
+
+						</div>
+					</div>
+
+					<div class="product__wrapper">
+						<button class="product__button" type="button">
+							Показать еще
+						</button>
+
+						<form class="product__form form">
+							<h2 class="form__title">Написать отзыв</h2>
+
+							<ul class="form__list">
+								<li class="form__item">
+									<label class="form__label" for="name">Как Вас зовут?*</label>
+									<input class="form__input" type="text" name="your-name" id="name">
+								</li>
+
+								<li class="form__item">
+									<label class="form__label" for="mail">Ваш e-mail*</label>
+									<input class="form__input" type="text" name="your-mail" id="mail">
+								</li>
+							</ul>
+
+							<div class="form__form-group form-group">
+								<label class="form__label">Ваша оценка</label>
+								<div class="star-rating">
+									<div class="star-rating__wrap">
+										<input class="star-rating__input" id="star-5" type="radio" name="rating" value="5">
+										<label class="star-rating__ico fa fa-star-o fa-lg" for="star-5" title="Отлично"></label>
+										<input class="star-rating__input" id="star-4" type="radio" name="rating" value="4">
+										<label class="star-rating__ico fa fa-star-o fa-lg" for="star-4" title="Хорошо"></label>
+										<input class="star-rating__input" id="star-3" type="radio" name="rating" value="3">
+										<label class="star-rating__ico fa fa-star-o fa-lg" for="star-3" title="Удовлетворительно"></label>
+										<input class="star-rating__input" id="star-2" type="radio" name="rating" value="2">
+										<label class="star-rating__ico fa fa-star-o fa-lg" for="star-2" title="Плохо"></label>
+										<input class="star-rating__input" id="star-1" type="radio" name="rating" value="1">
+										<label class="star-rating__ico fa fa-star-o fa-lg" for="star-1" title="Ужасно"></label>
+									</div>
+								</div>
+							</div>
+
+							<label class="form__label" for="review">Отзыв</label>
+							<textarea name="your-message" id="review"></textarea>
+
+							<div class="form__bottom">
+								<button class="form__submit" type="submit">
+									Оставить отзыв
+								</button>
+								<p class="form__descr">
+									Ваши отзывы помогуют нам становиться лучше.
+									Ваш e-mail будет скрыт от других посетителей.
+								</p>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div class="tabs__body">
+					2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore odio exercitationem, excepturi similique
+					nulla, voluptatem reprehenderit neque a minima eaque tenetur? Quos fugit voluptate enim quo sed, minima error
+					molestias!
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
