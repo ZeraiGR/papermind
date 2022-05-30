@@ -1,7 +1,14 @@
 <article class="cart">
 	<a class="cart__link" href="#">
 
-		<div class="cart__badge">@@badge</div>
+		<div class="badge">
+			<svg class="badge__icon" style="fill: #e43088;">
+				<use xlink:href="@img/sprite.svg#icon-badge"></use>
+			</svg>
+
+			<span class="badge__text" style="color: #ffffff;">@@badge</span>
+		</div>
+
 		<img class="cart__img" src="@img/product.png" alt="product">
 		<div class="cart__info">
 			<h2 class="cart__name">Название</h2>
@@ -9,10 +16,16 @@
 		</div>
 	</a>
 	<div class="reviews">
-		<div class="reviews__rating"></div>
+		<div class="reviews__rating rating-mini">
+			<span class="active"></span>
+			<span class="active"></span>
+			<span class="active"></span>
+			<span></span>
+			<span></span>
+		</div>
 		<a class="reviews__count" href="#">5 отзывов</a>
 	</div>
-	<a class="cart__add" href="#">
+	<a class="cart__add btn btn--empty" href="#">
 		Добавить в корзину
 	</a>
 </article>

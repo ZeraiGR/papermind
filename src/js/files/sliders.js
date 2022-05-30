@@ -7,7 +7,7 @@
 // Подключаем слайдер Swiper из node_modules
 // При необходимости подключаем дополнительные модули слайдера, указывая их в {} через запятую
 // Пример: { Navigation, Autoplay }
-import Swiper, { Navigation } from 'swiper';
+import Swiper, { Navigation, Thumbs, EffectFade, Pagination, FreeMode } from 'swiper';
 /*
 Основниые модули слайдера:
 Navigation, Pagination, Autoplay, 
@@ -46,64 +46,81 @@ function initSliders() {
 
 	// Перечень слайдеров
 	if (document.querySelector('.swiper')) {
-		new Swiper('.swiper', {
+		var productSlider = new Swiper('.product__slider', {
 			// Подключаем модули слайдера
 			// для конкретного случая
-			//modules: [Navigation, Pagination],
-			/*
+			modules: [Navigation, Thumbs, EffectFade],
 			effect: 'fade',
-			autoplay: {
-				delay: 3000,
-				disableOnInteraction: false,
-			},
-			*/
 			observer: true,
 			observeParents: true,
 			slidesPerView: 1,
 			spaceBetween: 0,
-			autoHeight: true,
+			// autoHeight: true,
 			speed: 800,
-			//touchRatio: 0,
-			//simulateTouch: false,
-			//loop: true,
-			//preloadImages: false,
-			//lazy: true,
-			// Dotts
-			//pagination: {
-			//	el: '.slider-quality__pagging',
-			//	clickable: true,
-			//},
-			// Arrows
-			navigation: {
-				nextEl: '.about__more .more__item_next',
-				prevEl: '.about__more .more__item_prev',
-			},
-			/*
-			breakpoints: {
-				320: {
-					slidesPerView: 1,
-					spaceBetween: 0,
-					autoHeight: true,
-				},
-				768: {
-					slidesPerView: 2,
-					spaceBetween: 20,
-				},
-				992: {
-					slidesPerView: 3,
-					spaceBetween: 20,
-				},
-				1268: {
-					slidesPerView: 4,
-					spaceBetween: 30,
-				},
-			},
-			*/
+			thumbs: {
+          swiper: new Swiper('.thumbs', {
+						modules: [Navigation, Pagination, FreeMode],
+						slidesPerView: 'auto',
+						spaceBetween: 10,
+						// breakpoints: {
+						// 	320: {
+						// 		spaceBetween: 20,
+						// 		direction: 'horizontal',
+						// 	},
+						// 	768: {
+						// 		direction: 'vertical',
+						// 		spaceBetween: 40,
+						// 	},
+						// }
+						navigation: {
+							nextEl: '.thumbs__next',
+						},
+						freeMode: true,
+						// pagination: {
+						// 	el: '.thumbs__pagination',
+						// 	type: 'fraction',
+						// },
+						clickable: true,
+					}),
+        },
 			on: {
 
 			}
 		});
+
+		if (document.documentElement.clientWidth <= 979) {
+			new Swiper('.similars__slider ', {
+				// Подключаем модули слайдера
+				// для конкретного случая
+				modules: [FreeMode],
+				observer: true,
+				freeMode: true,
+				observeParents: true,
+				slidesPerView: 'auto',
+				spaceBetween: 20,
+				// autoHeight: true,
+				speed: 800,
+				on: {
+
+					}
+			});
+		}
 	}
+
+	function change(){
+		var thumbsPagination = document.querySelector('.thumbs__pagination');
+		thumbsPagination.innerHTML =  'Фото ' + (productSlider.realIndex +  1) + ' из ' + (productSlider.slides.length);
+	}
+
+	change();
+	const thumbsSlides = document.querySelectorAll('.thumbs__slide');
+
+	if (thumbsSlides) {
+		thumbsSlides.forEach(el => {
+			el.addEventListener('click', change);
+		}); 
+	}
+	
 }
 // Скролл на базе слайдера (по классу swiper_scroll для оболочки слайдера)
 function initSlidersScroll() {

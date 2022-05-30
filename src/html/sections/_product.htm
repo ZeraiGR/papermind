@@ -2,82 +2,193 @@
 	<div class="product__container">
 		<div class="product__content">
 			<div class="product__sliders">
+				<div class="product__slider">
+					<div class="badge">
+						<svg class="badge__icon" style="fill: #e43088;">
+							<use xlink:href="@img/sprite.svg#icon-badge"></use>
+						</svg>
+
+						<span class="badge__text" style="color: #ffffff;">Скидка</span>
+					</div>
+
+					<ul class="product__swiper">
+						<li class="product__slide">
+							<img class="product__img" src="@img/product.png" alt="product">
+						</li>
+						<li class="product__slide">
+							<img class="product__img" src="@img/product-big.png" alt="product">
+						</li>
+						<li class="product__slide">
+							<img class="product__img" src="@img/product-big.png" alt="product">
+						</li>
+						<li class="product__slide">
+							<img class="product__img" src="@img/product-big.png" alt="product">
+						</li>
+						<li class="product__slide">
+							<img class="product__img" src="@img/product-big.png" alt="product">
+						</li>
+						<li class="product__slide">
+							<img class="product__img" src="@img/product-big.png" alt="product">
+						</li>
+						<li class="product__slide">
+							<img class="product__img" src="@img/product-big.png" alt="product">
+						</li>
+					</ul>
+				</div>
+
+				<div class="thumbs">
+					<ul class="thumbs__swiper">
+						<li class="thumbs__slide">
+							<img class="thumbs__img" src="@img/product-big.png" alt="product">
+						</li>
+						<li class="thumbs__slide">
+							<img class="thumbs__img" src="@img/product-big.png" alt="product">
+						</li>
+						<li class="thumbs__slide">
+							<img class="thumbs__img" src="@img/product-big.png" alt="product">
+						</li>
+						<li class="thumbs__slide">
+							<img class="thumbs__img" src="@img/product-big.png" alt="product">
+						</li>
+						<li class="thumbs__slide">
+							<img class="thumbs__img" src="@img/product-big.png" alt="product">
+						</li>
+						<li class="thumbs__slide">
+							<img class="thumbs__img" src="@img/product-big.png" alt="product">
+						</li>
+						<li class="thumbs__slide">
+							<img class="thumbs__img" src="@img/product-big.png" alt="product">
+						</li>
+					</ul>
+					<button class="thumbs__next" type="button">
+						<svg class="thumbs__next-icon">
+							<use xlink:href="@img/sprite.svg#icon-next"></use>
+						</svg>
+					</button>
+
+					<div class="thumbs__pagination">
+						Фото 0 из 0
+					</div>
+				</div>
 
 			</div>
+
 			<div class="product__info">
 				<h1 class="product__title title">Название продукта</h1>
 
-				<div class="reviews">
-					<div class="reviews__rating"></div>
+				<div class="reviews product__reviews">
+					<div class="reviews__rating rating-mini">
+						<span class="active"></span>
+						<span class="active"></span>
+						<span class="active"></span>
+						<span></span>
+						<span></span>
+					</div>
 					<a class="reviews__count" href="#">5 отзывов</a>
 				</div>
 
-				<div class="product__price">
-					<span class="product__price-old">299 грн</span>
-					<span class="product__price-new">199 грн</span>
-				</div>
+				<div class="product__bye">
+					<div class="product__price">
+						<span class="product__price-old">299 грн</span>
+						<span class="product__price-new">199 грн</span>
+					</div>
 
-				<div class="product__remainders">
-					Остаток: <span class="product__remain-counter">8шт.</span>
+					<div class="product__remainders">
+						Остаток: <span class="product__remain-counter">8шт.</span>
+					</div>
 				</div>
 
 				<div class="product__order">
-					<span>Количество</span>
-
 					<div class="product__order-content">
+						<span>Количество</span>
 						<div class="counter">
-							<button class="counter__btn" type="button">-</button>
-							<input class="counter__input" type="text">
-							<button class="counter__btn" type="button">+</button>
+							<button class="counter__btn minus" type="button">-</button>
+							<input class="counter__input" type="text" value="0" step="1" min="0">
+							<button class="counter__btn plus" type="button">+</button>
 						</div>
-						<a class="product__add" href="#">Добавить в корзину</a>
+						<a class="product__add btn" href="#">
+							Добавить в корзину
+							<svg class="product__add-icon">
+								<use xlink:href="@img/sprite.svg#mini-cart"></use>
+							</svg>
+						</a>
 					</div>
 
-					<div class="product__content">
-						<h2>Описание</h2>
+					<div data-showmore data-showmore-media="768,max" class="showmore">
+						<div data-showmore-content="100" class="showmore__content product__text">
+							<h2>Описание</h2>
 
-						<p>
-							Praesent dolor dignissim neque arcu sem proin volutpat dignissim et. Nunc orci, vulputate ut fermentum,
-							odio tincidunt
-							id vestibulum. Semper id orci, suspendisse habitant nunc a eget rutrum. Tortor habitant nibh turpis sem
-							sed rhoncus,
-							magnis ornare nec. Sit aliquet ultrices dictum pellentesque massa tellus. Sagittis aenean habitant mi, leo
-							tempor tellus
-							in nisl pretium. Mattis eget ut suspendisse habitant mattis.
-						</p>
-						<p>
-							Sagittis cursus pharetra in tristique ultricies. Luctus mattis montes, feugiat at sed. Dignissim faucibus
-							viverra eget
-							maecenas mattis amet leo. Eu ut tellus purus, sollicitudin cursus sollicitudin. Rhoncus tortor sem nec sit
-							feugiat sit
-							quis rhoncus feugiat. Turpis quam tristique ultrices a tincidunt sed. Tortor sed lectus pellentesque in
-							lacus. Tincidunt
-							scelerisque morbi magnis amet imperdiet.
-						</p>
+							<p>
+								Praesent dolor dignissim neque arcu sem proin volutpat dignissim et. Nunc orci, vulputate ut fermentum,
+								odio tincidunt
+								id vestibulum. Semper id orci, suspendisse habitant nunc a eget rutrum. Tortor habitant nibh turpis sem
+								sed rhoncus,
+								magnis ornare nec. Sit aliquet ultrices dictum pellentesque massa tellus. Sagittis aenean habitant mi,
+								leo
+								tempor tellus
+								in nisl pretium. Mattis eget ut suspendisse habitant mattis.
+							</p>
+							<p>
+								Sagittis cursus pharetra in tristique ultricies. Luctus mattis montes, feugiat at sed. Dignissim
+								faucibus
+								viverra eget
+								maecenas mattis amet leo. Eu ut tellus purus, sollicitudin cursus sollicitudin. Rhoncus tortor sem nec
+								sit
+								feugiat sit
+								quis rhoncus feugiat. Turpis quam tristique ultrices a tincidunt sed. Tortor sed lectus pellentesque in
+								lacus. Tincidunt
+								scelerisque morbi magnis amet imperdiet.
+							</p>
+							<p>
+								Sagittis cursus pharetra in tristique ultricies. Luctus mattis montes, feugiat at sed. Dignissim
+								faucibus
+								viverra eget
+								maecenas mattis amet leo. Eu ut tellus purus, sollicitudin cursus sollicitudin. Rhoncus tortor sem nec
+								sit
+								feugiat sit
+								quis rhoncus feugiat. Turpis quam tristique ultrices a tincidunt sed. Tortor sed lectus pellentesque in
+								lacus. Tincidunt
+								scelerisque morbi magnis amet imperdiet.
+							</p>
+						</div>
+						<button data-showmore-button type="button" class="showmore__more"><span>Развернуть
+								описание</span><span>Свернуть описание</span></button>
 					</div>
 				</div>
 			</div>
 		</div>
+	</div>
 
+	<div class="tabs__container">
 		<div data-tabs class="product__tabs tabs">
-			<nav data-tabs-titles class="tabs__navigation">
-				<button type="submit" class="tabs__title _tab-active">Отзывы (2)</button>
-				<button type="submit" class="tabs__title">Доставка и оплата</button>
+			<nav data-tabs-titles class="tabs__navigation product__navigation">
+				<button type="submit" class="product__tab-btn tabs__title _tab-active">Отзывы (2)</button>
+				<button type="submit" class="tabs__title product__tab-btn">Доставка и оплата</button>
 			</nav>
 			<div data-tabs-body class="tabs__content">
-				<div class="tabs__body">
+				<div class="tabs__body product__body">
 					<div class="product__feedback">
-						<ul class="product__reviews">
-							<li class="product__reviews-item">
-								<article class="review">
-									<img class="review__avatar" src="@img/avatar.png" alt="avatar">
-									<div class="review__info">
-										<div class="review__top">
-											<span class="review__name">Name</span>
-											<span class="review__date">11 мая, 2022 года</span>
+						<ul class="product__testimonials">
+							<li class="product__testimonial">
+								<article class="testimonial">
+									<img class="testimonial__avatar" src="@img/avatar.png" alt="avatar">
+									<div class="testimonial__info">
+										<div class="testimonial__top">
+											<span class="testimonial__name">Name</span>
+											<span class="testimonial__date">11 мая, 2022 года</span>
 										</div>
-										<div class="review__rating"></div>
-										<div class="review__text">
+
+										<div class="reviews testimonial__reviews">
+											<div class="reviews__rating rating-mini">
+												<span class="active"></span>
+												<span class="active"></span>
+												<span class="active"></span>
+												<span class="active"></span>
+												<span></span>
+											</div>
+										</div>
+
+										<div class="testimonial__text">
 											<p>
 												Suscipit malesuada nam faucibus phasellus in sodales nisl. Sed fames eget augue fringilla
 												sapien.
@@ -91,16 +202,24 @@
 									</div>
 								</article>
 							</li>
-							<li class="product__reviews-item">
-								<article class="review">
-									<img class="review__avatar" src="@img/avatar.png" alt="avatar">
-									<div class="review__info">
-										<div class="review__top">
-											<span class="review__name">Name</span>
-											<span class="review__date">11 мая, 2022 года</span>
+							<li class="product__testimonial">
+								<article class="testimonial">
+									<img class="testimonial__avatar" src="@img/avatar.png" alt="avatar">
+									<div class="testimonial__info">
+										<div class="testimonial__top">
+											<span class="testimonial__name">Name</span>
+											<span class="testimonial__date">11 мая, 2022 года</span>
 										</div>
-										<div class="review__rating"></div>
-										<div class="review__text">
+										<div class="reviews testimonial__reviews">
+											<div class="reviews__rating rating-mini">
+												<span class="active"></span>
+												<span class="active"></span>
+												<span class="active"></span>
+												<span class="active"></span>
+												<span></span>
+											</div>
+										</div>
+										<div class="testimonial__text">
 											<p>
 												Suscipit malesuada nam faucibus phasellus in sodales nisl. Sed fames eget augue fringilla
 												sapien.
@@ -115,14 +234,13 @@
 								</article>
 							</li>
 						</ul>
-
-						<div class="rating">
-
+						<div class="product__summary">
+							Shortcode will be here
 						</div>
 					</div>
 
 					<div class="product__wrapper">
-						<button class="product__button" type="button">
+						<button class="product__button btn btn--empty" type="button">
 							Показать еще
 						</button>
 
@@ -142,7 +260,7 @@
 							</ul>
 
 							<div class="form__form-group form-group">
-								<label class="form__label">Ваша оценка</label>
+								<label class="form__label">Ваша оценка*</label>
 								<div class="star-rating">
 									<div class="star-rating__wrap">
 										<input class="star-rating__input" id="star-5" type="radio" name="rating" value="5">
@@ -160,10 +278,10 @@
 							</div>
 
 							<label class="form__label" for="review">Отзыв</label>
-							<textarea name="your-message" id="review"></textarea>
+							<textarea class="form__textarea" name="your-message" id="review"></textarea>
 
 							<div class="form__bottom">
-								<button class="form__submit" type="submit">
+								<button class="form__submit btn" type="submit">
 									Оставить отзыв
 								</button>
 								<p class="form__descr">
@@ -174,7 +292,7 @@
 						</form>
 					</div>
 				</div>
-				<div class="tabs__body">
+				<div class="tabs__body product__body">
 					2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore odio exercitationem, excepturi similique
 					nulla, voluptatem reprehenderit neque a minima eaque tenetur? Quos fugit voluptate enim quo sed, minima error
 					molestias!

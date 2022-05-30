@@ -148,6 +148,17 @@ body {
 @import 'base';
 
 // Подключение стилей общих элементов проекта
+@import 'sections/similars';
+@import 'sections/catalog';
+@import 'sections/product';
+@import 'sections/blog';
+
+// Подключение стилей отдельных компонентов
+@import 'components/cart';
+@import 'components/pagination';
+@import 'components/badge';
+@import 'components/sortable';
+@import 'components/article';
 @import 'common';
 
 // Подключение стилей отдельных блоков
@@ -163,7 +174,7 @@ body {
 
 .star-rating__wrap {
 	display: inline-block;
-	font-size: 1rem;
+	font-size: 1.1rem;
 }
 
 .star-rating__wrap:after {
@@ -174,9 +185,9 @@ body {
 
 .star-rating__ico {
 	float: right;
-	padding-left: 2px;
+	padding-left: 7px;
 	cursor: pointer;
-	color: #FFB300;
+	color: #ffd600;
 }
 
 .star-rating__ico:last-child {
@@ -192,4 +203,50 @@ body {
 .star-rating__input:checked ~ .star-rating__ico:before
 {
 	content: "\f005";
+}
+
+// -----------------
+
+.rating-mini {
+	display: inline-block;
+	font-size: 0;
+
+	span {
+		padding: 0;
+		font-size: rem(22);
+		line-height: 1;
+		color: lightgrey;
+
+		&:not(:last-child) {
+			margin-right: rem(5);
+		}
+	}
+
+	& > span:before {
+		content: '★';
+	}
+
+	& > span.active {
+		color: #ffd600;
+	}
+}
+
+// 
+
+.rating-result span {
+	padding: 0;
+	font-size: 32px;
+	margin: 0 3px;
+	line-height: 1;
+	color: lightgrey;
+	text-shadow: 1px 1px #bbb;
+}
+
+.rating-result > span:before {
+	content: '★';
+}
+
+.rating-result > span.active {
+	color: gold;
+	text-shadow: 1px 1px #c60;
 }

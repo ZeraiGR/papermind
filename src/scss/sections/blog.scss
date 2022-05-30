@@ -1,0 +1,37 @@
+.blog {
+	margin: rem(55) 0 rem(105);
+
+	@media (max-width:$mobile){
+		margin: rem(25) 0;
+	}
+}
+
+.blog__top {
+	margin-bottom: rem(40);
+
+	@media (max-width:$mobile){
+		margin-bottom: rem(25);
+	}
+}
+
+.blog__title {
+	margin-bottom: rem(20);
+}
+
+.blog__list {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: rem(45) rem(40);
+
+	@media (max-width:$tablet){
+		gap: rem(25);
+	}
+
+	@media (max-width:$mobile){
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	@media (max-width:$mobileSmall){
+		grid-template-columns: 100%;
+	}
+}

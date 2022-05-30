@@ -1,0 +1,30 @@
+.badge {
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	right: 0;
+	transform: translate(50%, -50%);
+	width: rem(77);
+	height: rem(77);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	@media (max-width:$mobile){
+		transform: translate(30%, -30%);
+		width: rem(57);
+		height: rem(57);
+	}
+}
+
+.badge__icon {
+	height: 100%;
+	width: 100%;
+}
+
+.badge__text {
+	position: absolute;
+	font-weight: 700;
+	@include adaptiveValue("font-size", 12, 8);
+	line-height: 1.2;
+}

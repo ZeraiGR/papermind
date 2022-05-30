@@ -50,6 +50,7 @@
         "nouislider": "latest",
         "pug": "2.0.4",
         "pug-loader": "2.4.0",
+        "rateyo": "^3.0.0-alpha.2",
         "sass": "latest",
         "sass-loader": "latest",
         "smooth-scroll": "latest",

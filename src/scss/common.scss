@@ -5,4 +5,20 @@
 	color: #ffffff;
 	background-color: $accent;
 	border-radius: 2px;
+	transition: border-color 0.3s ease, background-color 0.3s ease;
+
+	&--empty {
+		background-color: transparent;
+		border: 1px solid $accent;
+	}
+
+	@media (max-width:$mobile){
+		padding: rem(15) rem(10);
+	}
+}
+
+.title {
+	font-weight: 800;
+	@include adaptiveValue("font-size", 30, 23);
+	line-height: 1.2;
 }

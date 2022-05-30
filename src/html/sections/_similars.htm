@@ -1,20 +1,23 @@
 <section class="similars">
 	<div class="similars__container">
-		<h2 class="title similars__title">Похожие товары</h2>
+		<h2 class="similars__title title">Похожие товары</h2>
 
-		<ul class="similars__list">
-			<li class="similars__item">
-				@@include('../components/_cart.htm',{"badge": "Скидка"})
-			</li>
-			<li class="similars__item">
-				@@include('../components/_cart.htm',{"badge": "Скидка"})
-			</li>
-			<li class="similars__item">
-				@@include('../components/_cart.htm',{"badge": "Скидка"})
-			</li>
-			<li class="similars__item">
-				@@include('../components/_cart.htm',{"badge": "Скидка"})
-			</li>
-		</ul>
+		<div class="similars__slider">
+			<ul class="similars__swiper similars__list">
+				<li class="similars__slide similars__item">
+					@@include('../components/_cart.htm',{"badge": "Скидка"})
+				</li>
+				<li class="similars__slide similars__item">
+					@@include('../components/_cart.htm',{"badge": "Скидка"})
+				</li>
+				<li class="similars__slide similars__item">
+					@@include('../components/_cart.htm',{"badge": "Скидка"})
+				</li>
+				<li class="similars__slide similars__item">
+					@@include('../components/_cart.htm',{"badge": "Скидка"})
+				</li>
+			</ul>
+		</div>
+
 	</div>
 </section>

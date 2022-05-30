@@ -1,0 +1,30 @@
+.pagination {
+	margin: rem(70) 0 rem(90);
+
+	ul {
+		display: flex;
+		justify-content: center;
+		gap: rem(10);
+	}
+
+	a, span {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: rem(40);
+		height: rem(40);
+		border-radius: 50%;
+		border: 1px solid #000000;
+		line-height: 1.55;
+	}
+
+	span {
+		background-color: $second;
+		color: #ffffff;
+		border-color: transparent;
+	}
+
+	@media (max-width:$mobile){
+		margin: rem(40) 0;
+	}
+}
