@@ -100,11 +100,40 @@ function initSliders() {
 				spaceBetween: 20,
 				// autoHeight: true,
 				speed: 800,
-				on: {
-
-					}
 			});
 		}
+
+		new Swiper('.testimonials__slider', {
+			// Подключаем модули слайдера
+			// для конкретного случая
+			modules: [Navigation],
+			observer: true,
+			observeParents: true,
+			slidesPerView: 3,
+			spaceBetween: 20,
+			navigation: {
+				prevEl: '.testimonials__prev',
+				nextEl: '.testimonials__next',
+			},
+			breakpoints: {
+					320: {
+						spaceBetween: 10,
+						slidesPerView: 1,
+					},
+					768: {
+						slidesPerView: 2,
+						spaceBetween: 20,
+					},
+					979: {
+						slidesPerView: 3,
+						spaceBetween: 40,
+					}
+				}, 
+			speed: 800,
+			on: {
+
+				}
+		});
 	}
 
 	function change(){

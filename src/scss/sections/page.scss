@@ -1,0 +1,41 @@
+.page-one {
+	@include adaptiveValue("margin-top", 55, 75);
+	@include adaptiveValue("margin-bottom", 85, 55);
+}
+
+.page-one__content {
+	h1, h2, h3, h4, h5, h6 {
+		margin: rem(25) 0;
+		font-weight: 800;
+		@include adaptiveValue("font-size", 30, 20);
+
+		&:first-of-type {
+			margin-top: 0;
+		}
+
+		@media (max-width:$mobile){
+			text-align: center;
+		}
+	}
+
+	p {
+		margin: rem(20) 0;
+		line-height: 1.2;
+	}
+}
+
+a.page-one__btn {
+	@include adaptiveValue("margin-top", 60, 20);
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	max-width: rem(250);
+	background-color: $second;
+	background-image: url('@img/icons/arrow-page.svg');
+	background-repeat: no-repeat;
+	background-position: calc(100% - 20px) center;
+
+	@media (max-width:$mobile){
+		text-align: center;
+	}
+}

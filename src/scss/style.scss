@@ -152,6 +152,17 @@ body {
 @import 'sections/catalog';
 @import 'sections/product';
 @import 'sections/blog';
+@import 'sections/promo';
+@import 'sections/offer';
+@import 'sections/offers';
+@import 'sections/advantages';
+@import 'sections/clients';
+@import 'sections/partners';
+@import 'sections/testimonials';
+@import 'sections/page';
+@import 'sections/delivery';
+@import 'sections/basket';
+@import 'sections/order';
 
 // Подключение стилей отдельных компонентов
 @import 'components/cart';

@@ -1,0 +1,59 @@
+.clients {
+	padding: rem(30) 0 rem(40);
+}
+
+.clients__title {
+	@include adaptiveValue("margin-bottom", 40, 25);
+}
+
+.clients__list {
+	@include adaptiveValue("margin-bottom", 60, 40);
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: rem(20) rem(40);
+
+	@media (max-width:$tablet){
+		gap: rem(20) rem(25);
+	}
+
+	@media (max-width:$mobile){
+		grid-template-columns: repeat(2, 1fr);
+		gap: rem(20);
+	}
+
+	@media (max-width:$mobileSmall){
+		grid-template-columns: 100%;
+	}
+}
+
+.clients__img,
+.clients__demo-img {
+	margin-bottom: rem(10);
+	width: 100%;
+	object-fit: cover;
+}
+
+.client__title {
+	margin-bottom: rem(35);
+}
+
+.clients__demo {
+	@include adaptiveValue("margin-bottom", 35, 25);
+	display: flex;
+}
+
+.clients__demo-item {
+	@include adaptiveValue("font-size", 15, 12);
+
+	&:not(:last-child) {
+		margin-right: rem(20);
+	}
+}
+
+.clients__btn {
+	margin: 0 auto;
+	max-width: 360px;
+	width: 100%;
+	display: block;
+	text-align: center;
+}

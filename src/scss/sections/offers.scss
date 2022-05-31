@@ -1,0 +1,42 @@
+.offers {
+	padding: rem(70) 0 rem(55);
+}
+
+.offers__title {
+	margin-bottom: rem(28);
+}
+
+.offers__list {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: rem(70) rem(40);
+
+	@media (max-width:$tablet){
+		gap: rem(40) rem(20);
+	}
+
+	@media (max-width:$mobile){
+		grid-template-columns: 100%;
+	}
+}
+
+.offers__item {
+}
+
+.offers__img {
+	margin-bottom: rem(20);
+	width: 100%;
+	object-fit: cover;
+}
+
+.offers__name {
+	margin-bottom: rem(16);
+	font-weight: 700;
+	@include adaptiveValue("font-size", 18, 14);
+	line-height: 1.2;
+}
+
+.offers__descr {
+	line-height: 1.2;
+	@include adaptiveValue("font-size", 15, 12);
+}

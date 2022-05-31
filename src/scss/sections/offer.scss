@@ -1,0 +1,175 @@
+.offer {
+	padding: rem(60) 0;
+	background-color: $accent;
+	color: #ffffff;
+
+	&--white {
+		padding: rem(100) 0 rem(80);
+		background-color: #ffffff;
+		color: $accent;
+
+		.offer__container {
+			background-image: url('@img/catalog.png');
+			background-repeat: no-repeat;
+			background-position: right center;
+
+			@media (max-width:$tablet){
+				background-image: none;
+			}
+
+			@media (max-width:$mobile){
+				padding-bottom: rem(380);
+				background-image: url('@img/catalog.png');
+				background-position: center calc(100% - 85px);
+			}
+
+			@media (max-width:$mobileSmall){
+				background-position: 10% calc(100% - 85px);
+				background-size: 95%;
+			}
+		}
+
+		.offer__title {
+			color: #000000;
+		}
+
+		.offer__form {
+			max-width: rem(760);
+
+			@media (max-width:$tablet){
+				max-width: 100%;
+			}
+		}
+
+		.offer__list {
+			margin-bottom: rem(35);
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: rem(17) rem(40);
+
+			@media (max-width:$mobile){
+				grid-template-columns: 100%;
+				gap: 0;
+			}
+		}
+
+		.offer__input {
+			border-color: $accent;
+			color: $accent;
+		}
+
+		.offer__btn {
+			margin-top: 0;
+		}
+
+		@media (max-width:$mobile){
+			padding: rem(55) 0 0;
+		}
+	}
+}
+
+.offer__title {
+	@include adaptiveValue("margin-bottom", 23, 15);
+	max-width: rem(800);
+}
+
+.offer__list {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	&:not(:last-child) {
+		margin-bottom: rem(25);
+	}
+
+	@media (max-width:$mobile){
+		flex-direction: column;
+	}
+}
+
+.offer__item {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	line-height: 1.2;
+
+	&--preparing {
+		margin-top: rem(24);
+		font-size: rem(13);
+
+		@media (max-width:$mobile){
+			text-align: center;
+			margin-top: 0;
+		}
+	}
+
+	&:not(:last-child) {
+		margin-right: rem(40);
+
+		@media (max-width:$mobile){
+			margin-bottom: rem(15);
+			margin-right: 0;
+		}
+	}
+}
+
+.offer__label {
+	margin-bottom: rem(10);
+	line-height: 1.2;
+}
+
+.offer__bottom {
+	display: flex;
+
+	.offer__btn {
+		width: 50%;
+		margin-right: rem(40);
+		background-color: $accent;
+		color: #ffffff;
+
+		@media (max-width:$mobile){
+			margin-bottom: rem(15);
+			width: 100%;
+			margin-right: 0;
+		}
+	}
+
+	.offer__text {
+		width: 50%;
+		font-size: rem(13);
+		line-height: 1.2;
+		text-align: center;
+
+		@media (max-width:$mobile){
+			width: 100%;
+
+		}
+	}
+
+	@media (max-width:$mobile){
+		flex-direction: column;
+	}
+}
+
+.offer__input {
+	min-height: rem(50);
+	padding: rem(10) rem(15);
+	border: 1px solid #ffffff;
+	outline: transparent;
+	color: #ffffff;
+	background-color: transparent;
+
+	&:focus {
+		border-color: $second;
+	}
+}
+
+button.offer__btn {
+	margin-top: rem(26);
+	line-height: 1.2;
+	font-size: rem(13);
+	background-color: #ffffff;
+	color: $accent;
+	font-size: rem(15);
+	font-weight: 700;
+}

@@ -1,0 +1,129 @@
+<section class="order">
+	<div class="order__container">
+		<h1 class="order__title title">Оформление заказа</h1>
+
+		<div class="order__content">
+			<div class="order__fields">
+				<div class="order__col">
+					<div class="order__group">
+						<h3 class="order__group-name">Детали оплаты</h3>
+
+						<ul class="order__list">
+							<li class="order__item">
+								<label class="order__label">
+									<input class="order__input" name="your-name" placeholder="Имя *" type="text" required>
+								</label>
+							</li>
+
+							<li class="order__item">
+								<label class="order__label">
+									<input class="order__input" name="your-surname" placeholder="Фамилия (необязательно)" type="text">
+								</label>
+							</li>
+
+							<li class="order__item">
+								<label class="order__label">
+									<input class="order__input" name="your-company" placeholder="Название компании (необязательно)"
+										type="text">
+								</label>
+							</li>
+
+							<li class="order__item">
+								<label class="order__label">
+									<input class="order__input" name="your-mail" placeholder="E-mail (необязательно)" type="text">
+								</label>
+							</li>
+
+							<li class="order__item">
+								<label class="order__label">
+									<input class="order__input" name="your-phone" placeholder="Телефон *" type="text" required>
+								</label>
+							</li>
+						</ul>
+					</div>
+
+					<label class="order__label order__label--register">
+						<span class="order__text">Зарегистрировать вас?</span>
+						<input class="chekbox sr-only" type="checkbox">
+						<span class="checker checker--order"></span>
+					</label>
+				</div>
+
+				<div class="order__col">
+					<div class="order__group">
+						<h3 class="order__group-name">Укажите адрес доставки</h3>
+
+						<ul class="order__list">
+							<li class="order__item">
+								<select class="order__select" name="area">
+									<option value="Выберите область">Выберите область</option>
+									<option value="Выберите область">Выберите область</option>
+									<option value="Выберите область">Выберите область</option>
+								</select>
+							</li>
+
+							<li class="order__item">
+								<select class="order__select" name="city">
+									<option value="Выберите город">Выберите город</option>
+									<option value="Выберите город">Выберите город</option>
+									<option value="Выберите город">Выберите город</option>
+								</select>
+							</li>
+
+							<li class="order__item">
+								<select class="order__select" name="area">
+									<option value="Выберите область">Выберите область</option>
+									<option value="Выберите область">Выберите область</option>
+									<option value="Выберите область">Выберите область</option>
+								</select>
+							</li>
+						</ul>
+					</div>
+
+					<label class="order__label">
+						<span class="order__text">Нужна адресная доставка</span>
+						<input class="chekbox sr-only" type="checkbox">
+						<span class="checker checker--order"></span>
+					</label>
+
+					<textarea class="order__additions" name="additions" placeholder="Примечание к заказу"></textarea>
+					<label class="order__label order__label--register-mobile">
+						<span class="order__text">Зарегистрировать вас?</span>
+						<input class="chekbox sr-only" type="checkbox">
+						<span class="checker checker--order"></span>
+					</label>
+				</div>
+
+
+			</div>
+
+			<div class="summary">
+				<h2 class="summary__heading">
+					<span>Итого:</span>
+					<span>1332$</span>
+				</h2>
+
+				<ul class="summary__checks">
+					<li class="summary__check">
+						<label class="summary__label">
+							<input class="chekbox sr-only" name="delivery" checked type="radio">
+							<span class="checker"></span>
+							<span class="summary__text">LiqPay (оплата онлайн)</span>
+						</label>
+					</li>
+					<li class="summary__check">
+						<label class="summary__label">
+							<input class="chekbox sr-only" name="delivery" type="radio">
+							<span class="checker"></span>
+							<span class="summary__text">Оплата при доставке</span>
+						</label>
+					</li>
+				</ul>
+
+				<a class="summary__link btn" href="#">
+					Перейти к оплате
+				</a>
+			</div>
+		</div>
+	</div>
+</section>
